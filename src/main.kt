@@ -1,7 +1,10 @@
+import model.Frutas
+
 fun main(args: Array<String>) {
 
     menu()
     var opcion:String?
+    var op: String?
 
     do {
         opcion= readLine()
@@ -10,6 +13,12 @@ fun main(args: Array<String>) {
             makeRecipe()
         }else if (opcion == "2"){
             viewRecipe()
+            op= readLine()
+            if (op == "5"){
+                var frutas = Frutas(2)
+                println(frutas.ListFrutas())
+            }
+
         }else if (opcion=="3"){
             println("Bye")
         }else{
